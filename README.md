@@ -40,11 +40,11 @@
   * Particiones: 0
   * Sistema de archivos: NTFS
   
-* Dirección MAC de la tarjeta wifi: AC-12-03-8C-44-C1----- (FALTA el C)
+* Dirección MAC de la tarjeta wifi: AC-12-03-8C-44-C1
 
 * Dirección IP (Interna, del router): 192.168.1.111
 
-* Dirección IP (Externa, del ISP): 190.45.122.34 --> 201.189.149.58
+* Dirección IP (Externa, del ISP): 201.189.149.58
 
 * Proveedor internet: Fibra óptica Movistar
 
