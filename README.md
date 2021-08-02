@@ -2,17 +2,17 @@
 
 # Mi computador principal
 
-* Marca/modelo: Asus VivoBook X413F
+* Marca/modelo: Asus VivoBook X413FA
 * Tipo: Notebook
-* Año adquisición: 2015
+* Año adquisición: 2021
 * Procesador:
-  * Marca/Modelo: Intel Core i7-4790K
-  * Velocidad Base: 4.00 GHz
-  * Velocidad Máxima: 4.40 GHz
+  * Marca/Modelo: Intel Core i7-4790K --> Intel Core i5-10210U
+  * Velocidad Base: 4.00 GHz --> 1.6 GHz
+  * Velocidad Máxima: 4.40 GHz --> 4,20 GHz
   * Numero de núcleos: 4 
   * Humero de hilos: 2
-  * Arquitectura: x86_64
-  * Set de instrucciones: Intel SSE4.1, Intel SSE4.2, Intel AVX2
+  * Arquitectura: x86_64 --> AMD64
+  * Set de instrucciones: Intel SSE4.1, Intel SSE4.2, Intel AVX2 --> Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2
 * Tamaño de las cachés del procesador
   * L1d: 32KB
   * L1i: 32KB
