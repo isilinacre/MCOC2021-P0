@@ -1,8 +1,8 @@
 # MCOC2021-P0
 
-# Mi computador principal
+# Mi computador principal 
 
-* Marca/modelo: Asus VivoBook X413FA
+* Marca/modelo: Asus VivoBook X413FA - BV807T
 
 * Tipo: Notebook
 
