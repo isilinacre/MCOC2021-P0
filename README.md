@@ -3,53 +3,51 @@
 # Mi computador principal
 
 * Marca/modelo: Asus VivoBook X413FA
+
 * Tipo: Notebook
+
 * Año adquisición: 2021
+
 * Procesador:
-  * Marca/Modelo: Intel Core i7-4790K --> Intel Core i5-10210U
-  * Velocidad Base: 4.00 GHz --> 1.6 GHz
-  * Velocidad Máxima: 4.40 GHz --> 4,20 GHz
+  * Marca/Modelo: Intel Core i5-10210U
+  * Velocidad Base: 1.6 GHz
+  * Velocidad Máxima: 4,20 GHz
   * Numero de núcleos: 4 
-  * Humero de hilos: 2
-  * Arquitectura: x86_64 --> AMD64
-  * Set de instrucciones: Intel SSE4.1, Intel SSE4.2, Intel AVX2 --> Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2
-* Tamaño de las cachés del procesador
-  * L1d: 32KB
-  * L1i: 32KB
-  * L2: 256KB
-  * L3: 8192KB
-* Memoria 
-  * Total: 32 GB
-  * Tipo memoria: DDR3
-  * Velocidad 1867 MHz
-  * Numero de (SO)DIMM: 4
-* Tarjeta Gráfica
-  * Marca / Modelo: Nvidia GeForce GTX 980M
-  * Memoria dedicada: 8192 MB
-  * Resolución: 1920 x 1080
-* Disco 1: 
-  * Marca: Samsung
-  * Tipo: SSD
-  * Tamaño: 1TB
-  * Particiones: 4
-  * Sistema de archivos: EXT4, swap
-* Disco 2: 
-  * Marca: Samsung
-  * Tipo: SSD
-  * Tamaño: 1TB
-  * Particiones: 1
-  * Sistema de archivos: EXT4
-* Disco 3: 
-  * Marca: Samsung
-  * Tipo: SSD
-  * Tamaño: 1TB
-  * Particiones: 1
-  * Sistema de archivos: EXT4
+  * Humero de hilos: 8
+  * Arquitectura: AMD64
+  * Set de instrucciones: Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2
   
-* Dirección MAC de la tarjeta wifi: 5C:E0:C5:D7:EE:48 
-* Dirección IP (Interna, del router): 192.168.0.129
-* Dirección IP (Externa, del ISP): 190.45.122.34
-* Proveedor internet: VTR Banda Ancha S.A.
+* Tamaño de las cachés del procesador
+  * L1: 256KB
+  * L2: 1MB
+  * L3: 6MB
+  
+* Memoria 
+  * Total: 8GB
+  * Tipo memoria: DDR4-2666
+  * Velocidad: 2667 MHz
+  * Numero de (SO)DIMM: 2
+  
+* Tarjeta Gráfica
+  * Marca / Modelo: Intel UHD Graphics 620
+  * Memoria dedicada: 0MB (Integrada)
+  * Resolución: 1366 x 768
+  
+* Disco 1: 
+  * Marca: WDC
+  * Tipo: SSD
+  * Tamaño: 256GB
+  * Particiones: 0
+  * Sistema de archivos: NTFS
+  
+* Dirección MAC de la tarjeta wifi: AC-12-03-8C-44-C1----- (FALTA el C)
+
+* Dirección IP (Interna, del router): 192.168.1.111
+
+* Dirección IP (Externa, del ISP): 190.45.122.34 --> 201.189.149.58
+
+* Proveedor internet: Fibra óptica Movistar
+
 
 
 
