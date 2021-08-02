@@ -2,7 +2,7 @@
 
 # Mi computador principal
 
-* Marca/modelo: System 76 Serval WS
+* Marca/modelo: Asus VivoBook X413F
 * Tipo: Notebook
 * Año adquisición: 2015
 * Procesador:
