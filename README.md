@@ -49,6 +49,9 @@
 * Proveedor internet: Fibra óptica Movistar
 
 
+![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/main/Graficos.png)
+
+
 
 
 
