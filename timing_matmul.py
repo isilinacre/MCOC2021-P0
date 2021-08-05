@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning) 
 
 # -------------------------------------------------------------------------------------------------
-Ns = [2,4,8,10,20,40,50,100,200,500,1000,2000,5000,10000]
+Ns = [2,4,10,15,20,30,35,40,45,50,55,60,65,80,100,150,170,200,250,400,500,600,800,1000,2000,5000,10000]
 
 NCOR = 10 #numero de corridas que quiero que escriba el programa
 

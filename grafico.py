@@ -68,5 +68,5 @@ plt.xticks(x2_vals,x2_txt,rotation=45) #roto los valores establecidos anteriorme
 plt.grid() #ploteo la malla del segundo grafico
 
 plt.tight_layout() # se ajusta el grafico para que quede mas bonito y ordenado
-plt.savefig("Graficos") #se guarda la foto del grafico en la carpeta donde se está corriendo este programa
+plt.savefig("Grafico") #se guarda la foto del grafico en la carpeta donde se está corriendo este programa
 plt.show() #muestra el grafico realizado
