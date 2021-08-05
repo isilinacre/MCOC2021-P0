@@ -50,12 +50,3 @@ for nc in range(NCOR): #recorro la cantidad de corridas entregado por la variabl
     
     fid.close()
 
-
-
-
-
-
-
-
-
-
