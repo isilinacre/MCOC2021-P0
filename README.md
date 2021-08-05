@@ -30,6 +30,7 @@ Se adjunta foto de los procesadores trabajando durante una corrida. Se puede not
 ![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico.png)
 Figura 1. Gráfico realizado 
 
+
 ![Procesadores CPU](https://github.com/isilinacre/MCOC2021-P0/blob/main/Procesadores%20CPU.png)
 Figura 2. Procesadores una vez corrido el programa 
 
