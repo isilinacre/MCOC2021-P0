@@ -27,7 +27,7 @@ Numpy 1.19.2
 * Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre una imagen (screenshot) de su uso de procesador durante alguna corrida para confirmar. 
 Se adjunta foto de los procesadores trabajando durante una corrida. Se puede notar como aumenta el trabajo de los procesadores una vez corrido el programa. 
 
-![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/main/Graficos.png)
+![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico.png)
 ![Procesadores CPU](https://github.com/isilinacre/MCOC2021-P0/blob/main/Procesadores%20CPU.png)
 
 
