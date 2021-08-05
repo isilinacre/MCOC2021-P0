@@ -16,6 +16,9 @@
 * Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre una imagen (screenshot) de su uso de procesador durante alguna corrida para confirmar. 
 
 
+![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/main/Graficos.png)
+
+
 
 
 
