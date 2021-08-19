@@ -1,41 +1,50 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Aug  4 17:26:33 2021
+Created on Tue Aug 17 20:31:47 2021
 
 @author: iplin
 """
 
-from numpy import loadtxt
-from scipy import matmul, rand
-from time import perf_counter
 from matplotlib import pyplot as plt
-import matplotlib.ticker
 
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning) 
-warnings.filterwarnings("ignore", category=RuntimeWarning) 
-
+#import warnings
+#warnings.filterwarnings("ignore", category=DeprecationWarning) 
+#warnings.filterwarnings("ignore", category=RuntimeWarning) 
 # -------------------------------------------------------------------------------------------------
+
 NCOR = 10 #numero de corridas 
-dts_list = []
+Ns_list = []
+dts_list = [] #tiempos
 mems_list = []
 
-for i in range(NCOR): #recorro la cantidad de numero de corridas 
-    fin = f"corrida_{i+1}.txt" #recorro el archivo de texto i creado por timing_matmul  
-    datos = loadtxt(fin) #cargo la informacion del archivo de texto "i" correspondiente 
+with open("Corrida_Numpy_single.txt") as f:
+    contenido = f.readlines()
 
-    Ns = datos[:,0] #accedo a todos los datos de la primera matriz eligiendo solo los de la primera columna (N)
-    dts = datos[:,1] #accedo a todos los datos de la primera matriz eligiendo solo los de la segunda columna (dt)
-    mems = datos[:,2] #accedo a todos los datos de la primera matriz eligiendo solo los de la tercera columna (memoria)
+for linea in contenido:
+    #print(linea.split())
     
-    dts_list.append(dts) #agrego todos los datos de la 2° columna (dt) de la matriz i  
-    mems_list.append(mems) #agrego todos los datos de la 3° columna (memoria) de la matriz i  
+    if len(linea.split()) == 2:
+        Ns = []
+        dts = [] #tiempos
+        mems = []
+    
+    if (len(linea.split()) == 1 and linea.split()[0] == "FINAL"):
+        pass
+        
+    elif len(linea.split()) == 3:
+        Ns.append(int(linea.split()[0]))
+        dts.append(float(linea.split()[1]))
+        mems.append(int(linea.split()[2]))
+    
+    else:
+        Ns_list.append(Ns)
+        dts_list.append(dts)   
+        mems_list.append(mems) 
 
-# -------------------------------------------------------------------------------------------------
 plt.figure(1) #creo un grafico en blanco
 
 plt.subplot(2,1,1) #creo 2 gráficos pero trabajo en el primero
-plt.title("Rendimiento A@B") #le escribo el titulo principal a mis graficos
+plt.title("Rendimiento INVERSA - dtype single") #le escribo el titulo principal a mis graficos
 plt.ylabel("Tiempo transcurrido (s)") #escribo el nombre correspondiente de la variable en eje y del primer grafico
 
 for l in range(NCOR): #recorro la cantidad de numero de corridas 
@@ -68,5 +77,8 @@ plt.xticks(x2_vals,x2_txt,rotation=45) #roto los valores establecidos anteriorme
 plt.grid() #ploteo la malla del segundo grafico
 
 plt.tight_layout() # se ajusta el grafico para que quede mas bonito y ordenado
-plt.savefig("Grafico") #se guarda la foto del grafico en la carpeta donde se está corriendo este programa
+plt.savefig("Grafico_dtype_single") #se guarda la foto del grafico en la carpeta donde se está corriendo este programa
+
 plt.show() #muestra el grafico realizado
+
+
