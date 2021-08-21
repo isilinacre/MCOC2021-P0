@@ -14,6 +14,9 @@ muchas más operaciones para llegar a una respuesta, en comparación con el algo
 Se tuvo que el algoritmo más rápido en promedio de tiempo de ejecución, fue SOLVE utilizando el dtype = single para
 todos los casos, ya que este dtype utiliza menos memoria para la ejecución del codigo. 
 
+![SOLVE - SINGLE](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/Grafico_caso_A_single.png)
+
+
 ¿Depende del tamaño de la matriz? 
 En gran parte de los casos, sobretodo con matrices de mayor dimensión, el tiempo de ejecución fue más lento que 
 en matrices entre N = 2 y N = 20, por ejemplo. Por lo tanto sí depende del tamaño de la matriz, sobre todo por ser 
@@ -31,12 +34,18 @@ de ejecución son menores.
 ¿Su computador usa más de un proceso por cada corrida? 
 Sí, utiliza los ocho procesadores tanto para resolver mediante SOLVE como EIGH.
 
+![CPU - EIGH](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/F-EIGH.jpeg)
+![CPU - SOLVE](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/F-SOLVE.jpeg)
+
+
 ¿Que hay del uso de memoria (como crece)? 
 El uso de memoria es lineal. Varía linealmente el tiempo transcurrido según la dimensión de la matriz ejecutada.
 Por otro lado, en el caso que se utiliza el algoritmo SOLVE, se puede notar que la primera operación llevada a cabo,
 es decir, invertir la matriz A y multiplicarla por el vector b (A^-1*b), utiliza más memoria que el resto de los 
 parametros utilizados para calcular x. 
 
+![MEMORIA - EIGH](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/Grafico_caso_B_double_memoria.png)
+![MEMORIA - SOLVE](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/Grafico_caso_A_double_memoria.png)
 
 
 
