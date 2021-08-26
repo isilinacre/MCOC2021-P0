@@ -40,10 +40,6 @@ for i in range(NCOR): #recorro la cantidad de numero de corridas
 dts_mean = mean(array(dts_last))  #Ordenes
 sol_mean = mean(array(sol_last))
 # -------------------------------------------------------------------------------------------------
-ON = Ns
-ON2 = Ns**2
-ON3 = Ns**3
-ON4 = Ns**4 
 
 plt.figure(1) #creo un grafico en blanco
 
@@ -54,12 +50,13 @@ plt.ylabel("Tiempo de ensamblado (s)") #escribo el nombre correspondiente de la 
 for l in range(NCOR): #recorro la cantidad de numero de corridas 
     dts = dts_list[l] #denomino como dts a la variable en la posicion l de la lista dts_list para graficar
     plt.loglog(Ns, dts,'-o',linewidth=1,alpha=0.5) #grafico bilogaritmicamente N vs tiempo
-    plt.loglog(Ns,[dts_mean]*len(Ns),'--', color = 'blue') # O(cte)
-    plt.loglog(Ns,(dts_mean/Ns[-1])*(Ns),'--', color = 'orange') # O(N)
-    plt.loglog(Ns,(dts_mean/Ns[-1]**2)*(Ns**2),'--', color = 'green') # O(N2)
-    plt.loglog(Ns,(dts_mean/Ns[-1]**3)*(Ns**3),'--', color = 'red') # O(N3)
-    plt.loglog(Ns,(dts_mean/Ns[-1]**4)*(Ns**4),'--', color = 'pink') # O(N4)
-    
+
+plt.loglog(Ns,[dts_mean]*len(Ns),'--', color = 'blue') # O(cte)
+plt.loglog(Ns,(dts_mean/Ns[-1])*(Ns),'--', color = 'orange') # O(N)
+plt.loglog(Ns,(dts_mean/Ns[-1]**2)*(Ns**2),'--', color = 'green') # O(N2)
+plt.loglog(Ns,(dts_mean/Ns[-1]**3)*(Ns**3),'--', color = 'red') # O(N3)
+plt.loglog(Ns,(dts_mean/Ns[-1]**4)*(Ns**4),'--', color = 'pink') # O(N4)
+
 y1_vals = [0.1e-3, 1e-3, 1e-2, 0.1, 1, 10, 60, 60*10] #valores de unidades de tiempo en eje y a escribir en este
 y1_txt = ['0.1 ms',"1 ms","10 ms","0.1 s","1s","10 s","1 min","10 min"] #unidades de tiempo en eje y
 plt.yticks(y1_vals,labels=y1_txt) #uso "ticks" para mostrar valores utilizados para mostrar ptos especificos en el grafico
@@ -67,6 +64,7 @@ x1_vals = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000] #valores a
 x1_txt = [""]*len(x1_vals) #agrego nada (literalmente) porque no quiero labels (texto en eje x)
 plt.xticks(x1_vals,x1_txt) #nuevamente uso "ticks" para mostrar los valores especificados en el grafico
 plt.ylim(0.1e-3/100,1000)
+plt.legend()
 plt.grid() #hago la malla del grafico
 
 plt.subplot(2,1,2) #creo 2 gráficos pero ahora trabajo en el segundo
@@ -76,11 +74,12 @@ plt.xlabel("Tamaño matriz N") #nombre asignado al eje x
 for m in range(NCOR): #recorro la cantidad de numero de corridas 
     sol = sol_list[m] #denomino como mems a la variable en la posicion m de la lista mems_list para graficar
     plt.loglog(Ns,sol,'-o',linewidth=1,alpha=0.5) #grafico bilogaritmicamente N vs memoria
-    plt.loglog(Ns,[sol_mean]*len(Ns),'--', color = 'blue') # O(cte)
-    plt.loglog(Ns,(sol_mean/Ns[-1])*(Ns),'--', color = 'orange') # O(N)
-    plt.loglog(Ns,(sol_mean/Ns[-1]**2)*(Ns**2),'--', color = 'green') # O(N2)
-    plt.loglog(Ns,(sol_mean/Ns[-1]**3)*(Ns**3),'--', color = 'red') # O(N3)
-    plt.loglog(Ns,(sol_mean/Ns[-1]**4)*(Ns**4),'--', color = 'pink') # O(N4)
+    
+plt.loglog(Ns,[sol_mean]*len(Ns),'--', color = 'blue', label='Constante') # O(cte)
+plt.loglog(Ns,(sol_mean/Ns[-1])*(Ns),'--', color = 'orange', label='O(N)') # O(N)
+plt.loglog(Ns,(sol_mean/Ns[-1]**2)*(Ns**2),'--', color = 'green', label='O(N^2)') # O(N2)
+plt.loglog(Ns,(sol_mean/Ns[-1]**3)*(Ns**3),'--', color = 'red', label='O(N^3)') # O(N3)
+plt.loglog(Ns,(sol_mean/Ns[-1]**4)*(Ns**4),'--', color = 'pink', label='O(N^4)') # O(N4)
 
 y2_vals = [0.1e-3, 1e-3, 1e-2, 0.1, 1, 10, 60, 60*10] #valores de unidades de memoria en eje y
 y2_txt = ['0.1 ms',"1 ms","10 ms","0.1 s","1s","10 s","1 min","10 min"] #unidades de memoria en eje y del segundo grafico
@@ -89,6 +88,8 @@ x2_vals = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000] #valores u
 x2_txt = ["10","20","50","100","200","500","1000","2000","5000","10000","20000"]
 plt.xticks(x2_vals,x2_txt,rotation=45) #roto los valores establecidos anteriormente en 45°
 plt.ylim(0.1e-3/100,1000)
+
+plt.legend()
 plt.grid() #ploteo la malla del segundo grafico
 
 plt.tight_layout() # se ajusta el grafico para que quede mas bonito y ordenado

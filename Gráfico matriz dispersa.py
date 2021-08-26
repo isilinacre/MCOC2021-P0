@@ -76,11 +76,12 @@ plt.xlabel("Tamaño matriz N") #nombre asignado al eje x
 for m in range(NCOR): #recorro la cantidad de numero de corridas 
     sol = sol_list[m] #denomino como mems a la variable en la posicion m de la lista mems_list para graficar
     plt.loglog(Ns,sol,'-o',linewidth=1,alpha=0.5) #grafico bilogaritmicamente N vs memoria
-    plt.loglog(Ns,[sol_mean]*len(Ns),'--', color = 'blue') # O(cte)
-    plt.loglog(Ns,(sol_mean/Ns[-1])*(Ns),'--', color = 'orange') # O(N)
-    plt.loglog(Ns,(sol_mean/Ns[-1]**2)*(Ns**2),'--', color = 'green') # O(N2)
-    plt.loglog(Ns,(sol_mean/Ns[-1]**3)*(Ns**3),'--', color = 'red') # O(N3)
-    plt.loglog(Ns,(sol_mean/Ns[-1]**4)*(Ns**4),'--', color = 'pink') # O(N4)
+
+plt.loglog(Ns,[sol_mean]*len(Ns),'--', color = 'blue', label='Constante') # O(cte)
+plt.loglog(Ns,(sol_mean/Ns[-1])*(Ns),'--', color = 'orange', label='O(N)') # O(N)
+plt.loglog(Ns,(sol_mean/Ns[-1]**2)*(Ns**2),'--', color = 'green', label='O(N^2)') # O(N2)
+plt.loglog(Ns,(sol_mean/Ns[-1]**3)*(Ns**3),'--', color = 'red', label='O(N^3)') # O(N3)
+plt.loglog(Ns,(sol_mean/Ns[-1]**4)*(Ns**4),'--', color = 'pink', label='O(N^4)') # O(N4)
 
 y2_vals = [0.1e-3, 1e-3, 1e-2, 0.1, 1, 10, 60, 60*10] #valores de unidades de memoria en eje y
 y2_txt = ['0.1 ms',"1 ms","10 ms","0.1 s","1s","10 s","1 min","10 min"] #unidades de memoria en eje y del segundo grafico
@@ -88,7 +89,8 @@ plt.yticks(y2_vals,labels=y2_txt) #uso "ticks" para mostrar valores utilizados p
 x2_vals = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000] #valores utilizados como N (tamaño matriz)
 x2_txt = ["10","20","50","100","200","500","1000","2000","5000","10000","20000"]
 plt.xticks(x2_vals,x2_txt,rotation=45) #roto los valores establecidos anteriormente en 45°
-plt.ylim(0.1e-3/5,0.01)
+plt.ylim(0.1e-3/100,0.01)
+plt.legend()
 plt.grid() #ploteo la malla del segundo grafico
 
 plt.tight_layout() # se ajusta el grafico para que quede mas bonito y ordenado
