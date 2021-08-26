@@ -79,7 +79,7 @@ Se puede notar como aumenta el trabajo de los procesadores una vez corrido el pr
 ![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/0d5b9d29b503649b8b348aee4258e444f4bd9548/Graficos.png)
 Figura 1. Gráfico realizado 
 
-![Procesadores CPU](https://github.com/isilinacre/MCOC2021-P0/blob/main/Procesadores%20CPU.png)
+![Procesadores CPU](https://github.com/isilinacre/MCOC2021-P0/blob/03ee6ef289333b5bf5206116d33ae4fe3b3ab2ec/Procesadores%20CPU.png)
 Figura 2. Procesadores una vez corrido el programa 
 
 
@@ -166,10 +166,10 @@ Se adjunta el gráfico realizado para el rendimiento MATMUL de la matriz llena:
 ![Rendimiento MATMUL - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20llena.png)
 
 Por otro lado, para el caso de la matriz dispersa, fue notoria la diferencia en tiempos de solución, ya que a pesar de que el tiempo de 
-ensamblado en términos de complejidad algoritmica fue la misma (N**2), los tiempos de solución una vez aplicando la función MATMUL
+ensamblado en términos de complejidad algoritmica fue la misma (N^2), los tiempos de solución una vez aplicando la función MATMUL
 y una matriz "SPARSE" de formato tipo CSR, bajaron, manteniendose en un rango entre 0.1 y 0.5 (ms), por lo que se puede ver en la figura,
 además de poder extraer que el tiempo de solución cambia en comparación al tiempo de solución de la matriz llena, ya que se puede notar
-que en este caso la complejidad está entre el orden N y N**2, por lo que en este caso, lo que se podría mejorar es el tiempo de ensamblado
+que en este caso la complejidad está entre el orden N y N^2, por lo que en este caso, lo que se podría mejorar es el tiempo de ensamblado
 para agilizar el tiempo y disminuir el orden de complejidad algoritmica. 
 
 ![Rendimiento MATMUL - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20dispersa.png)
