@@ -64,7 +64,6 @@ x1_vals = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000] #valores a
 x1_txt = [""]*len(x1_vals) #agrego nada (literalmente) porque no quiero labels (texto en eje x)
 plt.xticks(x1_vals,x1_txt) #nuevamente uso "ticks" para mostrar los valores especificados en el grafico
 plt.ylim(0.1e-3/100,1000)
-plt.legend()
 plt.grid() #hago la malla del grafico
 
 plt.subplot(2,1,2) #creo 2 gráficos pero ahora trabajo en el segundo
