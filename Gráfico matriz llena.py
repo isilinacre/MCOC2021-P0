@@ -87,7 +87,6 @@ x2_vals = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000] #valores u
 x2_txt = ["10","20","50","100","200","500","1000","2000","5000","10000","20000"]
 plt.xticks(x2_vals,x2_txt,rotation=45) #roto los valores establecidos anteriormente en 45°
 plt.ylim(0.1e-3/100,1000)
-
 plt.legend()
 plt.grid() #ploteo la malla del segundo grafico
 
