@@ -1,7 +1,6 @@
-^^3# MCOC2021-P0
+# MCOC2021-P0
 
-
-# Mi computador principal
+# Mi computador principal 
 
 * Marca/modelo: Asus VivoBook X413FA - BV807T
 
@@ -50,7 +49,7 @@ Dirección IP (Externa, del ISP): 201.189.149.58
 Proveedor internet: Fibra óptica Movistar
 
 
-#Desempeño MATMUL
+# DESEMPEÑO MATMUL 
 
 ¿Cómo difiere del gráfico del profesor/ayudante? 
 Mi grafico difiere principalmente en los tiempos transcurridos de las diferentes corridas, como se puede ver en la primera 
@@ -77,14 +76,14 @@ Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre 
 durante alguna corrida para confirmar. Se adjunta foto de los procesadores trabajando durante una corrida. 
 Se puede notar como aumenta el trabajo de los procesadores una vez corrido el programa.
 
-![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico.png)
+![Grafico](https://github.com/isilinacre/MCOC2021-P0/blob/0d5b9d29b503649b8b348aee4258e444f4bd9548/Graficos.png)
 Figura 1. Gráfico realizado 
 
 ![Procesadores CPU](https://github.com/isilinacre/MCOC2021-P0/blob/main/Procesadores%20CPU.png)
 Figura 2. Procesadores una vez corrido el programa 
 
 
-#Desempeño INV 
+# DESEMPEÑO INV 
 
 ¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta.
 --> El método de Numpy.linalg.inv() resuelve con la matriz A y la matriz I (identidad) utilizando el algoritmo solve. 
@@ -98,7 +97,7 @@ base al uso de procesadores y memoria observado durante las corridas.
 al utilizar más de un procesador en el desarrollo del código, en mi caso utlizando 8.
 
 
-# Desempeño SOLVE - EIGH
+# DESEMPEÑO SOLVE - EIGH
 
 --> Se utilizaron matrices de dimensiones hasta 5000 para agilizar el tiempo de ejecución del código
 
@@ -112,8 +111,7 @@ muchas más operaciones para llegar a una respuesta, en comparación con el algo
 Se tuvo que el algoritmo más rápido en promedio de tiempo de ejecución, fue SOLVE utilizando el dtype = single para
 todos los casos, ya que este dtype utiliza menos memoria para la ejecución del codigo. 
 
-![SOLVE - SINGLE](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/Grafico_caso_A_single.png)
-
+![SOLVE - SINGLE](https://github.com/isilinacre/MCOC2021-P0/blob/6c02207312f02ddd98ddd200f3010e620092bd72/Entrega%204/Grafico_caso_A_single.png)
 
 ¿Depende del tamaño de la matriz? 
 En gran parte de los casos, sobretodo con matrices de mayor dimensión, el tiempo de ejecución fue más lento que 
@@ -132,8 +130,8 @@ de ejecución son menores.
 ¿Su computador usa más de un proceso por cada corrida? 
 Sí, utiliza los ocho procesadores tanto para resolver mediante SOLVE como EIGH.
 
-![CPU - EIGH](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/F-EIGH.jpeg)
-![CPU - SOLVE](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/F-SOLVE.jpeg)
+![CPU - EIGH](https://github.com/isilinacre/MCOC2021-P0/blob/6c02207312f02ddd98ddd200f3010e620092bd72/Entrega%204/F-EIGH.jpeg)
+![CPU - SOLVE](https://github.com/isilinacre/MCOC2021-P0/blob/6c02207312f02ddd98ddd200f3010e620092bd72/Entrega%204/F-SOLVE.jpeg)
 
 
 ¿Que hay del uso de memoria (como crece)? 
@@ -142,8 +140,8 @@ Por otro lado, en el caso que se utiliza el algoritmo SOLVE, se puede notar que 
 es decir, invertir la matriz A y multiplicarla por el vector b (A^-1*b), utiliza más memoria que el resto de los 
 parametros utilizados para calcular x. 
 
-![MEMORIA - EIGH](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/Grafico_caso_B_double_memoria.png)
-![MEMORIA - SOLVE](https://github.com/isilinacre/MCOC2021-P0/blob/main/Entrega%204/Grafico_caso_A_double_memoria.png)
+![MEMORIA - EIGH](https://github.com/isilinacre/MCOC2021-P0/blob/6c02207312f02ddd98ddd200f3010e620092bd72/Entrega%204/Grafico_caso_B_double_memoria.png)
+![MEMORIA - SOLVE](https://github.com/isilinacre/MCOC2021-P0/blob/6c02207312f02ddd98ddd200f3010e620092bd72/Entrega%204/Grafico_caso_A_double_memoria.png)
 
 
 # Matrices dispersas y complejidad computacional
@@ -165,7 +163,7 @@ de presentarse la posibilidad de no llevarse a cabo el código. Por otro lado, d
 de N = 10.000 como máximo, ya que con matrices mayores el tiempo de ensamblado y solución eran mayor a 2 minutos por corrida.  
 Se adjunta el gráfico realizado para el rendimiento MATMUL de la matriz llena:
 
-![Rendimiento MATMUL - Matriz llena](-)
+![Rendimiento MATMUL - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20llena.png)
 
 Por otro lado, para el caso de la matriz dispersa, fue notoria la diferencia en tiempos de solución, ya que a pesar de que el tiempo de 
 ensamblado en términos de complejidad algoritmica fue la misma (N**2), los tiempos de solución una vez aplicando la función MATMUL
@@ -174,7 +172,7 @@ además de poder extraer que el tiempo de solución cambia en comparación al ti
 que en este caso la complejidad está entre el orden N y N**2, por lo que en este caso, lo que se podría mejorar es el tiempo de ensamblado
 para agilizar el tiempo y disminuir el orden de complejidad algoritmica. 
 
-![Rendimiento MATMUL - Matriz dispersa](-)
+![Rendimiento MATMUL - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20dispersa.png)
 
 
 
