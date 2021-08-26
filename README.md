@@ -156,24 +156,26 @@ def laplaciana(N, tipo = np.double):
 
 La elección de la matriz laplaciana, cómo se ve reflejada en el desempeño y complejidad algorítmica mostrada?
 
-Para el caso de la matriz llena, se puede ver del grafico que la complejidad algoritmica del ensamblaje de la laplaciana es N**2 y tiempo
-de solución N**3. Se puede inferir que la complejidad del ensamblaje no afecta tanto dado que se tendria que mejorar la solucion antes
-que esta última. Al presentar un orden mayor, significa que tiene una mayor complejidad por lo que se demora más en desarrollar, además
-de presentarse la posibilidad de no llevarse a cabo el código. Por otro lado, dado esto, se tuvo que correr el programa hasta matrices
-de N = 10.000 como máximo, ya que con matrices mayores el tiempo de ensamblado y solución eran mayor a 2 minutos por corrida.  
+Para el caso de la matriz llena (matriz cuyos valores incluye los términos cero), se puede ver del grafico que la complejidad algoritmica de ensamblaje de la 
+matriz laplaciana es N^2 y tiempo de solución N^3. Se puede inferir que la complejidad del ensamblaje no afecta tanto dado que se tendria que mejorar el 
+tiempo de solución antes que esta última. Al presentar un orden mayor, significa que tiene una mayor complejidad, por lo que se demora más en desarrollar el 
+código, además de presentarse la posibilidad de no llevarse a cabo en algún momento por falta de memoria, por ejemplo. Por otro lado, dado esto, se tuvo que correr 
+el programa hasta matrices de N = 10.000 como máximo, ya que con matrices mayores el tiempo de ensamblado y solución eran mayor a 2 minutos por corrida.  
 Se adjunta el gráfico realizado para el rendimiento MATMUL de la matriz llena:
 
 ![Rendimiento MATMUL - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20llena.png)
 
-Por otro lado, para el caso de la matriz dispersa, fue notoria la diferencia en tiempos de solución, ya que a pesar de que el tiempo de 
-ensamblado en términos de complejidad algoritmica fue la misma (N^2), los tiempos de solución una vez aplicando la función MATMUL
-y una matriz "SPARSE" de formato tipo CSR, bajaron, manteniendose en un rango entre 0.1 y 0.5 (ms), por lo que se puede ver en la figura,
-además de poder extraer que el tiempo de solución cambia en comparación al tiempo de solución de la matriz llena, ya que se puede notar
-que en este caso la complejidad está entre el orden N y N^2, por lo que en este caso, lo que se podría mejorar es el tiempo de ensamblado
-para agilizar el tiempo y disminuir el orden de complejidad algoritmica. 
+Por otro lado, para el caso de la matriz dispersa (matriz modificada excluyendo los términos cero), fue notoria la diferencia en tiempos de solución, ya que a 
+pesar de que el tiempo de ensamblado en términos de complejidad algoritmica fue la misma (N^2), los tiempos de solución bajaron una vez aplicando la función MATMUL
+y una matriz "SPARSE" de formato tipo CSR, manteniendose en un rango entre 0.1 y 0.5 (ms) pudiéndose ver esto en el gráfico.
+Además, se pudo concluir que el tiempo de solución cambia en comparación al tiempo de solución de la matriz llena, ya que se puede notar
+que en este caso la complejidad está entre el orden N y N^2 versus el orden de N^3 de la matriz llena, por lo que en este caso (dispersa), se podría mejorar el tiempo de ensamblado para agilizar el tiempo y disminuir el orden de complejidad algoritmica. 
 
 ![Rendimiento MATMUL - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20dispersa.png)
 
+En conclusión, se puede decir que mientras más grande sea el orden de la complejidad algoritmica, menos eficiente es el código escrito, por lo que se podría modificar 
+la matriz laplaciana y ver si existe otra manera de escribirla para notar si mejora el rendimiento de la función MATMUL. Por otro lado, se pudo notar que mientras 
+menos ceros tiene la matriz, menor es el orden de complejidad algoritmica lo que eficientiza el código y las funciones escritas.
 
 
 
