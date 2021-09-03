@@ -239,7 +239,7 @@ es estable en su totalidad. Además, para el caso de los tiempos de solución ("
 
 * Se reitera que para el caso de las matrices dispersas, se utilizaron dimensiones más grandes para poder analizar la complejidad algorítmica
 * También, para el caso de las matrices dispersas utilizando la inversa, se utilizó CSC, ya que es más eficiente que CSR, utilizado para solve. 
-
+* Se utilizaron para las matrices llenas, los casos más eficientes de entregas anteriores. 
 
 
 
