@@ -203,15 +203,43 @@ Figura 3.- INV Matriz Llena
 Figura 4.- INV  Matriz Dispersa
 
 Comente las diferencias que ve en el comportamiento de los algoritmos en el caso de matrices llenas y dispersas.
-
+Tal como se puede notar en las figuras 1 y 3, correspondientes a matrices llenas, se tiene que la complejidad algorítmica para el tiempo
+de ensamblado, corresponde a un orden de N^2 , mientras que el tiempo de solución corresponde a un orden de N^3, tanto para la función
+inv como para solve.
+Por otro lado, para las matrices dispersas, correspondientes a las figuras 2 y 4, se puede notar una diferencia de complejidades algorítmicas 
+entre ellas dadas las funciones utilizadas para cada una. Sin embargo, se puede ver que para la función inversa, la complejidad es muy alta
+en comparación con solve para el mismo tipo de matriz. 
+Se puede ver que las matrices llenas tienden a una complejidad a partir de matrices de dimensiones chicas como N = 50, tanto para ensamblado
+como solución, mientras que para las matrices dispersas la tendencia a una complejidad comienza a partir de matrices de dimension muy 
+grande. Además, se puede notar, tal como se comentó anteriormente, las matrices llenas son más eficientes que la matriz dispersa aplicada
+a la inversa, pero menos eficiente que la matriz dispersa aplicada a "solve". 
+* Por último, cabe destacar que para las matrices dispersas, dada su eficiencia, se corrieron hasta una dimensión de matriz equivalente a 
+N = 20.000 para poder hacer una comparación entre matrices del mismo tipo, adicionando que mientras más prqueña la dimensión de la matriz, 
+menos clara era su tendencia a una complejidad algoritmica. 
 
 ¿Cual parece la complejidad asintótica (para N → ∞)  para el ensamblado y solución en ambos casos y porqué?
-
+La complejidad asintótica en caso de las matrices llenas, para el ensamblado las corridas tienden a un orden de N^2, mientras que
+para la solución, las corridas tienden a un orden de N^3. Por otro lado, la complejidad asintótica para el caso de las matrices 
+dispersas, depende de la función utilizada. Para el caso de utilizar "inv", la complejidad tiende a un orden N^4 para ambos casos, es decir, 
+ensamblaje y solución, mientras que para "solve" la complejidad tiende a N. 
+Para ambos casos, sus tendencias son para los respectivos ordenes ya que tienen una pendiente similar al orden al que se "acercan".
 
 ¿Como afecta el tamaño de las matrices al comportamiento aparente?
-
+Para el caso de las matrices llenas, la tendencia comienza alrededor de dimensiones de N = 50 para todos los casos, mientras que para las
+matrices dispersas, la tendencia de ensamblado comienza en N = 500 (aprox), mientras que para la solución en N = 1000 (aprox).
+Dependiendo de cual sea el tipo de matriz y función que se esté aplicando, depende del tamaño de la matriz. Sin embargo, mientras más grande
+es la dimensión de la matriz, baja la eficiencia de rendimiento del programa, ya que el uso de memoria utilizado es mayor.  
 
 ¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
+Para el caso de las matrices llenas, tanto para "inv" como "solve", las corridas se establecen constantes a partir de un N = 1000. Antes
+de este valor, las corridas son poco estables desde N = 2 hasta aproximadamente N = 250. 
+Por otro lado, para las matrices dispersas, las corridas para el tiempo de ensamblado utilizando "inv", por ejemplo, nunca se muestran 
+estables antes de N = 20000, mientras que para "solve" se muestran más estables que el caso anteriormente mencionado, sin embargo, tampoco
+es estable en su totalidad. Además, para el caso de los tiempos de solución ("inv"), se muestran estables las corridas a partir de N = 1000.
+
+* Se reitera que para el caso de las matrices dispersas, se utilizaron dimensiones más grandes para poder analizar la complejidad algorítmica
+* También, para el caso de las matrices dispersas utilizando la inversa, se utilizó CSC, ya que es más eficiente que CSR, utilizado para solve. 
+
 
 
 

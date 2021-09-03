@@ -23,6 +23,8 @@ def laplaciana(N, t):
 
 # -------------------------------------------------------------------------------------------------
 Ns = [2,4,10,15,20,30,35,40,45,50,55,60,65,80,100,150,170,200,250,400,500,600,800,1000,2000,5000,10000,15000,20000]
+#Se corrio hasta N=20000 para poder comparar ambas matrices dispersas y su comportamiento para las mismas dimensiones
+#para que no se demore 1 hora corriendo pueden bajarlo a N=10000 o 5000
 
 NCOR = 10 #numero de corridas que quiero que escriba el programa
 
@@ -41,16 +43,16 @@ for nc in range(NCOR): #recorro la cantidad de corridas entregado por la variabl
         A = laplaciana(N, double)
         Acsc = sp.csc_matrix(A)
         #Acsr = sp.csr_matrix(A)
-        t2 = perf_counter() #funcion que me devuelve un float para tiempo en segundos 
-        Ainv = lin.inv(Acsc) #uso matmul para multiplicar las matrices creadas A y B        
+        t2 = perf_counter()
+        Ainv = lin.inv(Acsc)       
         #Ainv = lin.inv(Acsr)
         t3 = perf_counter()
         
         dtens = t2 - t1 #tiempo ensamblaje
         dtsol = t3 - t2 #tiempo solución
         
-        linea = f"{N} {dtens} {dtsol} \n" #defino la linea a escribir
-        fid.write(linea) #escribo la linea con N, dt y el uso de memoria total utilizado
+        linea = f"{N} {dtens} {dtsol} \n" 
+        fid.write(linea) 
 
         dts.append(dtens)
         sol.append(dtsol)
