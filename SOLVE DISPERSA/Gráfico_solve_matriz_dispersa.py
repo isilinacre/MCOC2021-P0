@@ -48,7 +48,7 @@ ON4 = Ns**4
 plt.figure(1) #creo un grafico en blanco
 
 plt.subplot(2,1,1) #creo 2 gráficos pero trabajo en el primero
-plt.title("Rendimiento MATMUL matriz dispersa") #le escribo el titulo principal a mis graficos
+plt.title("Rendimiento Solve Matriz Dispersa") #le escribo el titulo principal a mis graficos
 plt.ylabel("Tiempo de ensamblado (s)") #escribo el nombre correspondiente de la variable en eje y del primer grafico
 
 for l in range(NCOR): #recorro la cantidad de numero de corridas 
@@ -94,5 +94,5 @@ plt.legend()
 plt.grid() #ploteo la malla del segundo grafico
 
 plt.tight_layout() # se ajusta el grafico para que quede mas bonito y ordenado
-plt.savefig("Grafico matriz dispersa") #se guarda la foto del grafico en la carpeta donde se está corriendo este programa
+plt.savefig("Grafico Solve matriz dispersa") #se guarda la foto del grafico en la carpeta donde se está corriendo este programa
 plt.show() #muestra el grafico realizado

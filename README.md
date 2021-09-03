@@ -163,7 +163,7 @@ código, además de presentarse la posibilidad de no llevarse a cabo en algún m
 el programa hasta matrices de N = 10.000 como máximo, ya que con matrices mayores el tiempo de ensamblado y solución eran mayor a 2 minutos por corrida.  
 Se adjunta el gráfico realizado para el rendimiento MATMUL de la matriz llena:
 
-![Rendimiento MATMUL - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20llena.png)
+![Rendimiento MATMUL - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20llena.png)
 
 Por otro lado, para el caso de la matriz dispersa (matriz modificada excluyendo los términos cero), fue notoria la diferencia en tiempos de solución, ya que a 
 pesar de que el tiempo de ensamblado en términos de complejidad algoritmica fue la misma (N^2), los tiempos de solución bajaron una vez aplicando la función MATMUL
@@ -171,22 +171,44 @@ y una matriz "SPARSE" de formato tipo CSR, manteniendose en un rango entre 0.1 y
 Además, se pudo concluir que el tiempo de solución cambia en comparación al tiempo de solución de la matriz llena, ya que se puede notar
 que en este caso la complejidad está entre el orden N y N^2 versus el orden de N^3 de la matriz llena, por lo que en este caso (dispersa), se podría mejorar el tiempo de ensamblado para agilizar el tiempo y disminuir el orden de complejidad algoritmica. 
 
-![Rendimiento MATMUL - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/main/Grafico%20matriz%20dispersa.png)
+![Rendimiento MATMUL - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
 
 En conclusión, se puede decir que mientras más grande sea el orden de la complejidad algoritmica, menos eficiente es el código escrito, por lo que se podría modificar 
 la matriz laplaciana y ver si existe otra manera de escribirla para notar si mejora el rendimiento de la función MATMUL. Por otro lado, se pudo notar que mientras 
 menos ceros tiene la matriz, menor es el orden de complejidad algoritmica lo que eficientiza el código y las funciones escritas.
 
 
+# Matrices dispersas y complejidad computacional (PARTE II)
+
+La matriz laplaciana utilizada en el código de esta entrega:
+
+```python
+def laplaciana(N, tipo = double):
+    e = eye(N) - eye(N,N,1)
+    return tipo(e + e.T)
+```
+
+Se presentan los gráficos realizados para hacer las respectivas comparaciones en las preguntas a continuación:
+
+![Rendimiento Solve - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/SOLVE%20LLENA/Grafico_solve_Matrizllena.png)
+Figura 1.- Solve Matriz Llena 
+![Rendimiento Solve - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
+Figura 2.- Solve Matriz Dispersa
+![Rendimiento INV - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
+Figura 3.- INV Matriz Llena 
+![Rendimiento INV - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
+Figura 4.- INV  Matriz Llena 
+
+Comente las diferencias que ve en el comportamiento de los algoritmos en el caso de matrices llenas y dispersas.
 
 
+¿Cual parece la complejidad asintótica (para N → ∞)  para el ensamblado y solución en ambos casos y porqué?
 
 
+¿Como afecta el tamaño de las matrices al comportamiento aparente?
 
 
-
-
-
+¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
 
 
 
