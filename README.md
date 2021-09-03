@@ -192,12 +192,12 @@ Se presentan los gráficos realizados para hacer las respectivas comparaciones e
 
 ![Rendimiento Solve - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/SOLVE%20LLENA/Grafico_solve_Matrizllena.png)
 Figura 1.- Solve Matriz Llena 
-![Rendimiento Solve - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
+![Rendimiento Solve - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/main/SOLVE%20DISPERSA/Grafico%20Solve%20matriz%20dispersa.png)
 Figura 2.- Solve Matriz Dispersa
-![Rendimiento INV - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
+![Rendimiento INV - Matriz llena](https://github.com/isilinacre/MCOC2021-P0/blob/main/INV%20LLENA/Grafico_INV_Matrizllena.png)
 Figura 3.- INV Matriz Llena 
-![Rendimiento INV - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/8b30315875c2f156a74d37cd56af3813ac006af1/Grafico%20matriz%20dispersa.png)
-Figura 4.- INV  Matriz Llena 
+![Rendimiento INV - Matriz dispersa](https://github.com/isilinacre/MCOC2021-P0/blob/main/INV%20DISPERSA/Grafico%20INV%20matriz%20dispersa.png)
+Figura 4.- INV  Matriz Dispersa
 
 Comente las diferencias que ve en el comportamiento de los algoritmos en el caso de matrices llenas y dispersas.
 
